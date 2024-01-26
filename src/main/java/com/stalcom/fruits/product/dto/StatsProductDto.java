@@ -3,7 +3,8 @@ package com.stalcom.fruits.product.dto;
 import com.stalcom.fruits.product.model.Sort;
 import com.stalcom.fruits.product.model.Type;
 import com.stalcom.fruits.supplier.model.Supplier;
-import lombok.*;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.time.LocalDate;
 
