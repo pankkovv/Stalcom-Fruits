@@ -13,7 +13,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"supplier\":\"1\",\r\n    \"warehouse\":\"1\",\r\n    \"timeDelivery\":\"2024-01-26\",\r\n    \"productDtoList\":[\r\n        {\r\n            \"type\":\"APPLE\",\r\n            \"sort\":\"GOLD\",\r\n            \"count\":\"500\",\r\n            \"price\":\"100\"\r\n        },\r\n        {\r\n            \"type\":\"PEAR\",\r\n            \"sort\":\"ABBAT\",\r\n            \"count\":\"600\",\r\n            \"price\":\"200\"\r\n        }\r\n    ]\r\n}",
+					"raw": "{\r\n    \"supplier\":\"1\",\r\n    \"warehouse\":\"1\",\r\n    \"timeDelivery\":\"2024-01-26\",\r\n    \"productDtoList\":[\r\n        {\r\n            \"type\":\"APPLE\",\r\n            \"sort\":\"GOLD\",\r\n            \"count\":\"500\",\r\n            \"price\":\"100\"\r\n        },\r\n        {\r\n            \"type\":\"APPLE\",\r\n            \"sort\":\"GALA\",\r\n            \"count\":\"500\",\r\n            \"price\":\"100\" \r\n        },\r\n        {\r\n            \"type\":\"PEAR\",\r\n            \"sort\":\"ABBAT\",\r\n            \"count\":\"600\",\r\n            \"price\":\"200\"\r\n        },\r\n        {\r\n            \"type\":\"PEAR\",\r\n            \"sort\":\"SUMMER\",\r\n            \"count\":\"600\",\r\n            \"price\":\"200\"\r\n        }\r\n    ]\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -42,7 +42,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"supplier\":\"2\",\r\n    \"warehouse\":\"1\",\r\n    \"timeDelivery\":\"2024-01-27\",\r\n    \"productDtoList\":[\r\n        {\r\n            \"type\":\"APPLE\",\r\n            \"sort\":\"GOLD\",\r\n            \"count\":\"700\",\r\n            \"price\":\"200\"\r\n        },\r\n        {\r\n            \"type\":\"PEAR\",\r\n            \"sort\":\"ABBAT\",\r\n            \"count\":\"800\",\r\n            \"price\":\"300\"\r\n        }\r\n    ]\r\n}",
+					"raw": "{\r\n    \"supplier\":\"2\",\r\n    \"warehouse\":\"1\",\r\n    \"timeDelivery\":\"2024-01-29\",\r\n    \"productDtoList\":[\r\n         {\r\n            \"type\":\"APPLE\",\r\n            \"sort\":\"GOLD\",\r\n            \"count\":\"500\",\r\n            \"price\":\"100\"\r\n        },\r\n        {\r\n            \"type\":\"APPLE\",\r\n            \"sort\":\"GALA\",\r\n            \"count\":\"500\",\r\n            \"price\":\"100\" \r\n        },\r\n        {\r\n            \"type\":\"PEAR\",\r\n            \"sort\":\"ABBAT\",\r\n            \"count\":\"600\",\r\n            \"price\":\"200\"\r\n        },\r\n        {\r\n            \"type\":\"PEAR\",\r\n            \"sort\":\"SUMMER\",\r\n            \"count\":\"600\",\r\n            \"price\":\"200\"\r\n        }\r\n    ]\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
