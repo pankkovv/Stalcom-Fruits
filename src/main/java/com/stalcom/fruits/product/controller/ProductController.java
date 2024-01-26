@@ -1,7 +1,9 @@
 package com.stalcom.fruits.product.controller;
 
-import com.stalcom.fruits.product.dto.ShipmentDto;
-import com.stalcom.fruits.product.mapper.ShipmentMapper;
+import com.stalcom.fruits.product.dto.ProductResponseDto;
+import com.stalcom.fruits.product.dto.ProductShipmentDto;
+import com.stalcom.fruits.product.dto.StatsProductDto;
+import com.stalcom.fruits.product.mapper.ProductMapper;
 import com.stalcom.fruits.product.model.Product;
 import com.stalcom.fruits.product.service.ProductService;
 import lombok.RequiredArgsConstructor;
@@ -12,23 +14,24 @@ import javax.validation.Valid;
 import java.util.List;
 
 @RestController
-@RequestMapping(path = "/shipment")
+@RequestMapping(path = "/product")
 @RequiredArgsConstructor
 public class ProductController {
     private final ProductService productService;
-    private final ShipmentMapper shipmentMapper;
+    private final ProductMapper productMapper;
 
-    @PostMapping(path = "/create")
+    @PostMapping(path = "/shipment")
     @ResponseStatus(HttpStatus.CREATED)
-    public void createShipment(@RequestBody @Valid ShipmentDto shipmentDto){
-        List<Product> listProduct = shipmentMapper.listProductDtoToListProduct(shipmentDto.getProductDtoList());
-        productService.create(shipmentDto.getSupplier(), shipmentDto.getWarehouse(), listProduct);
+    public List<ProductResponseDto> createNewShipment(@RequestBody @Valid ProductShipmentDto productShipmentDto) {
+        List<Product> listProduct = productMapper.listProductDtoToListProduct(productShipmentDto.getProductDtoList());
+        return productMapper.listProductToListProductResponseDto(productService.create(productShipmentDto, listProduct));
     }
 
     @GetMapping(path = "/stats")
     @ResponseStatus(HttpStatus.OK)
-    public void statsShipment(@RequestBody @Valid ShipmentDto shipmentDto){
-        List<Product> listProduct = shipmentMapper.listProductDtoToListProduct(shipmentDto.getProductDtoList());
-        productService.create(shipmentDto.getSupplier(), shipmentDto.getWarehouse(), listProduct);
+    public List<StatsProductDto> statsShipment(@RequestParam(name = "start") String start,
+                                               @RequestParam(name = "end") String end) {
+        return productService.stats(start, end);
+
     }
 }

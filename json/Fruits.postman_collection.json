@@ -1,16 +1,96 @@
 {
 	"info": {
-		"_postman_id": "954543de-3482-4bb7-8f42-4884563eaeae",
+		"_postman_id": "93f49564-3265-4bd4-b986-9bb11538603d",
 		"name": "Fruits",
-		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
-		"_exporter_id": "25511117"
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26931934"
 	},
 	"item": [
 		{
-			"name": "Create shipment",
+			"name": "Create shipment 1 suppler",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"supplier\":\"1\",\r\n    \"warehouse\":\"1\",\r\n    \"timeDelivery\":\"2024-01-26\",\r\n    \"productDtoList\":[\r\n        {\r\n            \"type\":\"APPLE\",\r\n            \"sort\":\"GOLD\",\r\n            \"count\":\"500\",\r\n            \"price\":\"100\"\r\n        },\r\n        {\r\n            \"type\":\"PEAR\",\r\n            \"sort\":\"ABBAT\",\r\n            \"count\":\"600\",\r\n            \"price\":\"200\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/product/shipment",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"product",
+						"shipment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create shipment 2 suppler",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"supplier\":\"2\",\r\n    \"warehouse\":\"1\",\r\n    \"timeDelivery\":\"2024-01-27\",\r\n    \"productDtoList\":[\r\n        {\r\n            \"type\":\"APPLE\",\r\n            \"sort\":\"GOLD\",\r\n            \"count\":\"700\",\r\n            \"price\":\"200\"\r\n        },\r\n        {\r\n            \"type\":\"PEAR\",\r\n            \"sort\":\"ABBAT\",\r\n            \"count\":\"800\",\r\n            \"price\":\"300\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/product/shipment",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"product",
+						"shipment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get stats",
 			"request": {
 				"method": "GET",
-				"header": []
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/product/stats?start=2024-01-25&end=2024-01-28",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"product",
+						"stats"
+					],
+					"query": [
+						{
+							"key": "start",
+							"value": "2024-01-25"
+						},
+						{
+							"key": "end",
+							"value": "2024-01-28"
+						}
+					]
+				}
 			},
 			"response": []
 		}

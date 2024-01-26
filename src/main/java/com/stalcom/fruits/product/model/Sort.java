@@ -4,7 +4,7 @@ public enum Sort {
     GOLD("Gold"),
     GALA("Gala"),
     ABBAT("Abbat"),
-    Summer("summer");
+    SUMMER("summer");
     public final String label;
 
     Sort(String label) {

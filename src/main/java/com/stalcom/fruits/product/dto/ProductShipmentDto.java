@@ -9,7 +9,7 @@ import java.util.List;
 
 @Data
 @Builder
-public class ShipmentDto {
+public class ProductShipmentDto {
     @NotNull
     private long supplier;
     @NotNull
